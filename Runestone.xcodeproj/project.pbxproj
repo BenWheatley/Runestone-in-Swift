@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5D492421E4B76E400CDCD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492411E4B76E400CDCD92 /* AppDelegate.swift */; };
+		B5D492441E4B76E400CDCD92 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5D492431E4B76E400CDCD92 /* GameScene.sks */; };
+		B5D492461E4B76E400CDCD92 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5D492451E4B76E400CDCD92 /* Actions.sks */; };
+		B5D492481E4B76E400CDCD92 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492471E4B76E400CDCD92 /* GameScene.swift */; };
+		B5D4924A1E4B76E400CDCD92 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492491E4B76E400CDCD92 /* GameViewController.swift */; };
+		B5D4924D1E4B76E400CDCD92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D4924B1E4B76E400CDCD92 /* Main.storyboard */; };
+		B5D4924F1E4B76E500CDCD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D4924E1E4B76E500CDCD92 /* Assets.xcassets */; };
+		B5D492521E4B76E500CDCD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D492501E4B76E500CDCD92 /* LaunchScreen.storyboard */; };
+		B5D4925D1E4B76E500CDCD92 /* RunestoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4925C1E4B76E500CDCD92 /* RunestoneTests.swift */; };
+		B5D492681E4B76E500CDCD92 /* RunestoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492671E4B76E500CDCD92 /* RunestoneUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5D492591E4B76E500CDCD92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5D492361E4B76E400CDCD92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5D4923D1E4B76E400CDCD92;
+			remoteInfo = Runestone;
+		};
+		B5D492641E4B76E500CDCD92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5D492361E4B76E400CDCD92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5D4923D1E4B76E400CDCD92;
+			remoteInfo = Runestone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5D4923E1E4B76E400CDCD92 /* Runestone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runestone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D492411E4B76E400CDCD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5D492431E4B76E400CDCD92 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B5D492451E4B76E400CDCD92 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		B5D492471E4B76E400CDCD92 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B5D492491E4B76E400CDCD92 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B5D4924C1E4B76E400CDCD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5D4924E1E4B76E500CDCD92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5D492511E4B76E500CDCD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5D492531E4B76E500CDCD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D492581E4B76E500CDCD92 /* RunestoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunestoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D4925C1E4B76E500CDCD92 /* RunestoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneTests.swift; sourceTree = "<group>"; };
+		B5D4925E1E4B76E500CDCD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D492631E4B76E500CDCD92 /* RunestoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunestoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D492671E4B76E500CDCD92 /* RunestoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneUITests.swift; sourceTree = "<group>"; };
+		B5D492691E4B76E500CDCD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5D4923B1E4B76E400CDCD92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D492551E4B76E500CDCD92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D492601E4B76E500CDCD92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5D492351E4B76E400CDCD92 = {
+			isa = PBXGroup;
+			children = (
+				B5D492401E4B76E400CDCD92 /* Runestone */,
+				B5D4925B1E4B76E500CDCD92 /* RunestoneTests */,
+				B5D492661E4B76E500CDCD92 /* RunestoneUITests */,
+				B5D4923F1E4B76E400CDCD92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5D4923F1E4B76E400CDCD92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4923E1E4B76E400CDCD92 /* Runestone.app */,
+				B5D492581E4B76E500CDCD92 /* RunestoneTests.xctest */,
+				B5D492631E4B76E500CDCD92 /* RunestoneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5D492401E4B76E400CDCD92 /* Runestone */ = {
+			isa = PBXGroup;
+			children = (
+				B5D492411E4B76E400CDCD92 /* AppDelegate.swift */,
+				B5D492431E4B76E400CDCD92 /* GameScene.sks */,
+				B5D492451E4B76E400CDCD92 /* Actions.sks */,
+				B5D492471E4B76E400CDCD92 /* GameScene.swift */,
+				B5D492491E4B76E400CDCD92 /* GameViewController.swift */,
+				B5D4924B1E4B76E400CDCD92 /* Main.storyboard */,
+				B5D4924E1E4B76E500CDCD92 /* Assets.xcassets */,
+				B5D492501E4B76E500CDCD92 /* LaunchScreen.storyboard */,
+				B5D492531E4B76E500CDCD92 /* Info.plist */,
+			);
+			path = Runestone;
+			sourceTree = "<group>";
+		};
+		B5D4925B1E4B76E500CDCD92 /* RunestoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4925C1E4B76E500CDCD92 /* RunestoneTests.swift */,
+				B5D4925E1E4B76E500CDCD92 /* Info.plist */,
+			);
+			path = RunestoneTests;
+			sourceTree = "<group>";
+		};
+		B5D492661E4B76E500CDCD92 /* RunestoneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5D492671E4B76E500CDCD92 /* RunestoneUITests.swift */,
+				B5D492691E4B76E500CDCD92 /* Info.plist */,
+			);
+			path = RunestoneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5D4923D1E4B76E400CDCD92 /* Runestone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5D4926C1E4B76E500CDCD92 /* Build configuration list for PBXNativeTarget "Runestone" */;
+			buildPhases = (
+				B5D4923A1E4B76E400CDCD92 /* Sources */,
+				B5D4923B1E4B76E400CDCD92 /* Frameworks */,
+				B5D4923C1E4B76E400CDCD92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Runestone;
+			productName = Runestone;
+			productReference = B5D4923E1E4B76E400CDCD92 /* Runestone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5D492571E4B76E500CDCD92 /* RunestoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5D4926F1E4B76E500CDCD92 /* Build configuration list for PBXNativeTarget "RunestoneTests" */;
+			buildPhases = (
+				B5D492541E4B76E500CDCD92 /* Sources */,
+				B5D492551E4B76E500CDCD92 /* Frameworks */,
+				B5D492561E4B76E500CDCD92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5D4925A1E4B76E500CDCD92 /* PBXTargetDependency */,
+			);
+			name = RunestoneTests;
+			productName = RunestoneTests;
+			productReference = B5D492581E4B76E500CDCD92 /* RunestoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5D492621E4B76E500CDCD92 /* RunestoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5D492721E4B76E500CDCD92 /* Build configuration list for PBXNativeTarget "RunestoneUITests" */;
+			buildPhases = (
+				B5D4925F1E4B76E500CDCD92 /* Sources */,
+				B5D492601E4B76E500CDCD92 /* Frameworks */,
+				B5D492611E4B76E500CDCD92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5D492651E4B76E500CDCD92 /* PBXTargetDependency */,
+			);
+			name = RunestoneUITests;
+			productName = RunestoneUITests;
+			productReference = B5D492631E4B76E500CDCD92 /* RunestoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5D492361E4B76E400CDCD92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Ben Wheatley";
+				TargetAttributes = {
+					B5D4923D1E4B76E400CDCD92 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					B5D492571E4B76E500CDCD92 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B5D4923D1E4B76E400CDCD92;
+					};
+					B5D492621E4B76E500CDCD92 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B5D4923D1E4B76E400CDCD92;
+					};
+				};
+			};
+			buildConfigurationList = B5D492391E4B76E400CDCD92 /* Build configuration list for PBXProject "Runestone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5D492351E4B76E400CDCD92;
+			productRefGroup = B5D4923F1E4B76E400CDCD92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5D4923D1E4B76E400CDCD92 /* Runestone */,
+				B5D492571E4B76E500CDCD92 /* RunestoneTests */,
+				B5D492621E4B76E500CDCD92 /* RunestoneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5D4923C1E4B76E400CDCD92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D4924D1E4B76E400CDCD92 /* Main.storyboard in Resources */,
+				B5D492441E4B76E400CDCD92 /* GameScene.sks in Resources */,
+				B5D4924F1E4B76E500CDCD92 /* Assets.xcassets in Resources */,
+				B5D492521E4B76E500CDCD92 /* LaunchScreen.storyboard in Resources */,
+				B5D492461E4B76E400CDCD92 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D492561E4B76E500CDCD92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D492611E4B76E500CDCD92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5D4923A1E4B76E400CDCD92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D492481E4B76E400CDCD92 /* GameScene.swift in Sources */,
+				B5D4924A1E4B76E400CDCD92 /* GameViewController.swift in Sources */,
+				B5D492421E4B76E400CDCD92 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D492541E4B76E500CDCD92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D4925D1E4B76E500CDCD92 /* RunestoneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D4925F1E4B76E500CDCD92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D492681E4B76E500CDCD92 /* RunestoneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5D4925A1E4B76E500CDCD92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5D4923D1E4B76E400CDCD92 /* Runestone */;
+			targetProxy = B5D492591E4B76E500CDCD92 /* PBXContainerItemProxy */;
+		};
+		B5D492651E4B76E500CDCD92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5D4923D1E4B76E400CDCD92 /* Runestone */;
+			targetProxy = B5D492641E4B76E500CDCD92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5D4924B1E4B76E400CDCD92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5D4924C1E4B76E400CDCD92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B5D492501E4B76E500CDCD92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5D492511E4B76E500CDCD92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5D4926A1E4B76E500CDCD92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5D4926B1E4B76E500CDCD92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5D4926D1E4B76E500CDCD92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Runestone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitsunesoftware.Runestone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B5D4926E1E4B76E500CDCD92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Runestone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitsunesoftware.Runestone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B5D492701E4B76E500CDCD92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RunestoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitsunesoftware.RunestoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runestone.app/Runestone";
+			};
+			name = Debug;
+		};
+		B5D492711E4B76E500CDCD92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RunestoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitsunesoftware.RunestoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runestone.app/Runestone";
+			};
+			name = Release;
+		};
+		B5D492731E4B76E500CDCD92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = RunestoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitsunesoftware.RunestoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Runestone;
+			};
+			name = Debug;
+		};
+		B5D492741E4B76E500CDCD92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = RunestoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitsunesoftware.RunestoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Runestone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5D492391E4B76E400CDCD92 /* Build configuration list for PBXProject "Runestone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5D4926A1E4B76E500CDCD92 /* Debug */,
+				B5D4926B1E4B76E500CDCD92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5D4926C1E4B76E500CDCD92 /* Build configuration list for PBXNativeTarget "Runestone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5D4926D1E4B76E500CDCD92 /* Debug */,
+				B5D4926E1E4B76E500CDCD92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B5D4926F1E4B76E500CDCD92 /* Build configuration list for PBXNativeTarget "RunestoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5D492701E4B76E500CDCD92 /* Debug */,
+				B5D492711E4B76E500CDCD92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B5D492721E4B76E500CDCD92 /* Build configuration list for PBXNativeTarget "RunestoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5D492731E4B76E500CDCD92 /* Debug */,
+				B5D492741E4B76E500CDCD92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5D492361E4B76E400CDCD92 /* Project object */;
+}
