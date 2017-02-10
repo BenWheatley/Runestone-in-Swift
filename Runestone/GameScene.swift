@@ -34,7 +34,7 @@ class GameScene: SKScene {
 			if let pos = tile.realPosition {
 				tile.removeFromParent()
 				tile.position = CGPoint(x: TILE_WIDTH*(CGFloat(pos.x)-xOffset),
-				                   y: TILE_HEIGHT*(CGFloat(pos.y)-yOffset)	)
+				                        y: TILE_HEIGHT*(CGFloat(pos.y)-yOffset)	)
 				tile.setScale(0.002)
 				self.addChild(tile)
 			}
