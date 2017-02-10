@@ -17,6 +17,8 @@
 		B5D492521E4B76E500CDCD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D492501E4B76E500CDCD92 /* LaunchScreen.storyboard */; };
 		B5D4925D1E4B76E500CDCD92 /* RunestoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4925C1E4B76E500CDCD92 /* RunestoneTests.swift */; };
 		B5D492681E4B76E500CDCD92 /* RunestoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492671E4B76E500CDCD92 /* RunestoneUITests.swift */; };
+		B5D492761E4B7A7600CDCD92 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492751E4B7A7600CDCD92 /* GameModel.swift */; };
+		B5D492781E4B813600CDCD92 /* KSArrayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492771E4B813600CDCD92 /* KSArrayUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		B5D492631E4B76E500CDCD92 /* RunestoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunestoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D492671E4B76E500CDCD92 /* RunestoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneUITests.swift; sourceTree = "<group>"; };
 		B5D492691E4B76E500CDCD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D492751E4B7A7600CDCD92 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		B5D492771E4B813600CDCD92 /* KSArrayUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSArrayUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				B5D492431E4B76E400CDCD92 /* GameScene.sks */,
 				B5D492451E4B76E400CDCD92 /* Actions.sks */,
 				B5D492471E4B76E400CDCD92 /* GameScene.swift */,
+				B5D492751E4B7A7600CDCD92 /* GameModel.swift */,
+				B5D492771E4B813600CDCD92 /* KSArrayUtil.swift */,
 				B5D492491E4B76E400CDCD92 /* GameViewController.swift */,
 				B5D4924B1E4B76E400CDCD92 /* Main.storyboard */,
 				B5D4924E1E4B76E500CDCD92 /* Assets.xcassets */,
@@ -270,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D492781E4B813600CDCD92 /* KSArrayUtil.swift in Sources */,
 				B5D492481E4B76E400CDCD92 /* GameScene.swift in Sources */,
+				B5D492761E4B7A7600CDCD92 /* GameModel.swift in Sources */,
 				B5D4924A1E4B76E400CDCD92 /* GameViewController.swift in Sources */,
 				B5D492421E4B76E400CDCD92 /* AppDelegate.swift in Sources */,
 			);
