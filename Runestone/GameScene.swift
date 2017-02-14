@@ -99,18 +99,20 @@ class GameScene: SKScene {
 			nextFrom.x -= 1
 		}
 		
+		if (nextFrom.x==to.x && nextFrom.y==to.y) {
+			return [to]
+		}
+		
 		if gameModel.routable(location: nextFrom)==false {
-			if (nextFrom.x==to.x && nextFrom.y==to.y) {
-				return [to]
-			} else {
-				return nil
-			}
+			return nil
 		}
 		
 		for nextDirection in [Direction.North, Direction.South, Direction.East, Direction.West] {
-			return route(from: nextFrom, to: to,
-			             direction: nextDirection,
-			             remainingBends: (direction==nextDirection) ? remainingBends : remainingBends-1)
+			if let route = route(from: nextFrom, to: to,
+			                     direction: nextDirection,
+			                     remainingBends: (direction==nextDirection) ? remainingBends : remainingBends-1) {
+				return [from] + route
+			}
 		}
 		return nil
 	}
