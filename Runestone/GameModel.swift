@@ -112,7 +112,7 @@ class GameModel {
 	
 	/// Returns the number of non-blank, non-blocking tiles in this game
 	func tileCount() -> Int {
-		return tiles.filter({[TileType.Blank, TileType.Blocking].contains($0.type)}).count
+		return tiles.filter({![TileType.Blank, TileType.Blocking].contains($0.type)}).count
 	}
 	
 	/**
