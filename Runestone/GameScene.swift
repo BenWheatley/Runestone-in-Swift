@@ -19,7 +19,7 @@ class GameScene: SKScene {
 	var gameModel = GameModel()
 	var currentSelection = Array<Tile>()
 	
-	var lblTiles = SKLabelNode(text: <#T##String?#>)
+	var lblTiles = SKLabelNode(text: "keyTilesRemaining".localize())
 	
     private var lastUpdateTime : TimeInterval = 0
 	
