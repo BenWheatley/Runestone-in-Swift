@@ -13,6 +13,7 @@ import GameplayKit
 // Layout constants
 let TILE_WIDTH = CGFloat(0.10)
 let TILE_HEIGHT = CGFloat(0.10)
+let SCALE = CGFloat(0.002)
 
 class GameScene: SKScene {
     
@@ -35,7 +36,7 @@ class GameScene: SKScene {
 				tile.removeFromParent()
 				tile.position = CGPoint(x: TILE_WIDTH*(CGFloat(pos.x)-xOffset),
 				                        y: TILE_HEIGHT*(CGFloat(pos.y)-yOffset)	)
-				tile.setScale(0.002)
+				tile.setScale(SCALE)
 				self.addChild(tile)
 			}
 		}
