@@ -19,6 +19,8 @@ class GameScene: SKScene {
 	var gameModel = GameModel()
 	var currentSelection = Array<Tile>()
 	
+	var lblTiles = SKLabelNode(text: <#T##String?#>)
+	
     private var lastUpdateTime : TimeInterval = 0
 	
     override func sceneDidLoad() {

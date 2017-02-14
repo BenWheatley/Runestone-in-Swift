@@ -19,6 +19,7 @@
 		B5D492681E4B76E500CDCD92 /* RunestoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492671E4B76E500CDCD92 /* RunestoneUITests.swift */; };
 		B5D492761E4B7A7600CDCD92 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492751E4B7A7600CDCD92 /* GameModel.swift */; };
 		B5D492781E4B813600CDCD92 /* KSArrayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492771E4B813600CDCD92 /* KSArrayUtil.swift */; };
+		B5D4927A1E4E196D00CDCD92 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5D492791E4E196D00CDCD92 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B5D492691E4B76E500CDCD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D492751E4B7A7600CDCD92 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		B5D492771E4B813600CDCD92 /* KSArrayUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSArrayUtil.swift; sourceTree = "<group>"; };
+		B5D492791E4E196D00CDCD92 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				B5D492431E4B76E400CDCD92 /* GameScene.sks */,
 				B5D492451E4B76E400CDCD92 /* Actions.sks */,
 				B5D492471E4B76E400CDCD92 /* GameScene.swift */,
+				B5D492791E4E196D00CDCD92 /* Localizable.strings */,
 				B5D492751E4B7A7600CDCD92 /* GameModel.swift */,
 				B5D492771E4B813600CDCD92 /* KSArrayUtil.swift */,
 				B5D492491E4B76E400CDCD92 /* GameViewController.swift */,
@@ -249,6 +252,7 @@
 			files = (
 				B5D4924D1E4B76E400CDCD92 /* Main.storyboard in Resources */,
 				B5D492441E4B76E400CDCD92 /* GameScene.sks in Resources */,
+				B5D4927A1E4E196D00CDCD92 /* Localizable.strings in Resources */,
 				B5D4924F1E4B76E500CDCD92 /* Assets.xcassets in Resources */,
 				B5D492521E4B76E500CDCD92 /* LaunchScreen.storyboard in Resources */,
 				B5D492461E4B76E400CDCD92 /* Actions.sks in Resources */,
