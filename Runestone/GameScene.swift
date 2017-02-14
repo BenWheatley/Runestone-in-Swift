@@ -30,8 +30,6 @@ class GameScene: SKScene {
 		let xOffset = CGFloat(gameModel.width-1)/2.0
 		let yOffset = CGFloat(gameModel.height-1)/2.0
 		
-		self.size = CGSize(width: 1, height: 1)
-		
 		for tile in gameModel.tiles {
 			if let pos = tile.realPosition {
 				tile.removeFromParent()
