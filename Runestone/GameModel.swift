@@ -101,6 +101,10 @@ class GameModel {
 		}
 	}
 	
+	func tileCount() -> Int {
+		return tiles.filter({[TileType.Blank, TileType.Blocking].contains($0.type)}).count
+	}
+	
 	func routable(location: Int2DPosition) -> Bool {
 		if location.x < -1 || location.y < -1 || location.x > width || location.y > height {
 			return false
