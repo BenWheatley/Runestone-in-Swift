@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50D935C1E5287FF0084ED7A /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = B50D935B1E5287FF0084ED7A /* LICENCE */; };
 		B5D492421E4B76E400CDCD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492411E4B76E400CDCD92 /* AppDelegate.swift */; };
 		B5D492441E4B76E400CDCD92 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5D492431E4B76E400CDCD92 /* GameScene.sks */; };
 		B5D492461E4B76E400CDCD92 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5D492451E4B76E400CDCD92 /* Actions.sks */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B50D935B1E5287FF0084ED7A /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		B5D4923E1E4B76E400CDCD92 /* Runestone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runestone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D492411E4B76E400CDCD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5D492431E4B76E400CDCD92 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		B5D492351E4B76E400CDCD92 = {
 			isa = PBXGroup;
 			children = (
+				B50D935B1E5287FF0084ED7A /* LICENCE */,
 				B5D492401E4B76E400CDCD92 /* Runestone */,
 				B5D4925B1E4B76E500CDCD92 /* RunestoneTests */,
 				B5D492661E4B76E500CDCD92 /* RunestoneUITests */,
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5D4924D1E4B76E400CDCD92 /* Main.storyboard in Resources */,
+				B50D935C1E5287FF0084ED7A /* LICENCE in Resources */,
 				B5D492441E4B76E400CDCD92 /* GameScene.sks in Resources */,
 				B5D4927A1E4E196D00CDCD92 /* Localizable.strings in Resources */,
 				B5D4924F1E4B76E500CDCD92 /* Assets.xcassets in Resources */,
@@ -531,6 +535,7 @@
 				B5D4926E1E4B76E500CDCD92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5D4926F1E4B76E500CDCD92 /* Build configuration list for PBXNativeTarget "RunestoneTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +544,7 @@
 				B5D492711E4B76E500CDCD92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5D492721E4B76E500CDCD92 /* Build configuration list for PBXNativeTarget "RunestoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +553,7 @@
 				B5D492741E4B76E500CDCD92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
