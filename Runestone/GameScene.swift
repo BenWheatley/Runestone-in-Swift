@@ -9,6 +9,8 @@
 import SpriteKit
 import GameplayKit
 
+// For games like this, I think it's better to have each tile be a fixed fraction of screen size, so the coordinate space is [0,0]-[1,1] rather than [0,0]-[pointWidth,pointHeight]
+// Layout constants
 let TILE_WIDTH = CGFloat(0.10)
 let TILE_HEIGHT = CGFloat(0.10)
 
@@ -43,6 +45,14 @@ class GameScene: SKScene {
 		}
 	}
 	
+	/**
+	Takes to tiles and if:
+	1) they match
+	**and**
+	2) a route exists between them
+	
+	it removes the tiles from the game. If they cannot be removed, deselects the second tile.
+	*/
 	func tryToMatchAndRemoveTiles(_ firstTile: Tile, _ secondTile: Tile) {
 		if firstTile.type == secondTile.type && (route(fastOrPretty:.Pretty, from:firstTile, to:secondTile) != nil) {
 			firstTile.removeFromParent()
@@ -57,6 +67,7 @@ class GameScene: SKScene {
 		}
 	}
 	
+	/// Set of directions within the game.
 	enum Direction {
 		case North
 		case East
@@ -64,11 +75,22 @@ class GameScene: SKScene {
 		case West
 	}
 	
+	/// Set of search options within the game.
 	enum FastOrPretty {
 		case Fast
 		case Pretty
 	}
 	
+	/** Searches a route between two tiles.
+	
+	- parameter fastOrPretty: "Pretty" routes use the smallest number of bends, for example two tiles next to each other is a zero-bend path;
+	You don't want to use a "pretty" search every frame on every tile, or at least you *didn't* when this was running on an iPhone 4.
+	
+	- parameter from: The origin tile
+	- parameter to: The destination tile
+	
+	- returns: Optional array of Int2DPosition representing the steps on the route; nil if no route exists
+	*/
 	func route(fastOrPretty: FastOrPretty, from: Tile, to: Tile) -> [Int2DPosition]? {
 		let minRemainingBends = ( fastOrPretty==FastOrPretty.Fast ? 2 : 1 )
 		
@@ -84,7 +106,17 @@ class GameScene: SKScene {
 		return nil
 	}
 	
-	func route(from: Int2DPosition, to: Int2DPosition, direction: Direction, remainingBends: Int) -> [Int2DPosition]? {
+	/** Recursive route finder, not to be called publicly.
+	
+	- parameter from: The origin tile
+	- parameter to: The destination tile
+	- parameter direction: The initial direction to be moving in from the origin tile
+	- parameter remainingBends: How many more times the route is allowed to bend
+	
+	- returns: Optional array of Int2DPosition representing the steps on the route; nil if no route exists with the specified requirements.
+	*/
+	private func route(from: Int2DPosition, to: Int2DPosition, direction: Direction, remainingBends: Int) -> [Int2DPosition]? {
+		// If we have turned too often, return nil
 		if remainingBends<0 {
 			return nil
 		}
@@ -101,14 +133,17 @@ class GameScene: SKScene {
 			nextFrom.x -= 1
 		}
 		
+		// If the next place we're going to look at is the destination, just return the destination as the last step on the route to the destination
 		if (nextFrom.x==to.x && nextFrom.y==to.y) {
 			return [to]
 		}
 		
+		// If there is no route, return nil
 		if gameModel.routable(location: nextFrom)==false {
 			return nil
 		}
 		
+		// For each direction, recursively route from there to the destination. If the attempt succeeds, add the place we started from to the start of the route, and pop one level of the recursion
 		for nextDirection in [Direction.North, Direction.South, Direction.East, Direction.West] {
 			if let route = route(from: nextFrom, to: to,
 			                     direction: nextDirection,
@@ -116,12 +151,15 @@ class GameScene: SKScene {
 				return [from] + route
 			}
 		}
+		
+		// There was no route in any direction from here, so return nil
 		return nil
 	}
 	
     func touchDown(atPoint pos : CGPoint) {
 		let touchedNodes = self.nodes(at: pos)
 		
+		// Make the touched nodes bounce, mark them as selected and tint them red so the user knows what's up
 		for node in touchedNodes {
 			if let tile = node as? Tile {
 				let scale = SKAction.scale(by: 1.2, duration: 0.15)
@@ -147,6 +185,7 @@ class GameScene: SKScene {
 		}
     }
 	
+	/// Deselects a tile (internal state, ought to be refactored…) and removes it from the list of selected tiles
 	func deselect(tile:Tile) {
 		tile.fontColor = UIColor.white
 		if let index = currentSelection.index(of: tile) {
