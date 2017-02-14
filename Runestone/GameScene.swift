@@ -23,7 +23,7 @@ class GameScene: SKScene {
 	
 	var gameModel = GameModel()
 	
-	var lblTiles = SKLabelNode(text: "keyTilesRemaining".localize())
+	var lblTiles = SKLabelNode()
 	
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
@@ -40,6 +40,12 @@ class GameScene: SKScene {
 				self.addChild(tile)
 			}
 		}
+		
+		lblTiles.removeFromParent()
+		lblTiles.position = CGPoint(x: 0, y: -0.4)
+		lblTiles.color = UIColor.white
+		lblTiles.setScale(SCALE)
+		self.addChild(lblTiles)
 	}
 	
     func touchDown(atPoint pos : CGPoint) {
@@ -88,7 +94,8 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        
+		lblTiles.text = String.localizedStringWithFormat("keyTilesRemaining".localize(), String(gameModel.tileCount()))
+		
         // Initialize _lastUpdateTime if it has not already been
         if (self.lastUpdateTime == 0) {
             self.lastUpdateTime = currentTime
