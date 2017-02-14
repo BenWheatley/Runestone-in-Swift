@@ -26,7 +26,6 @@ class GameScene: SKScene {
 	
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
-		self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 		
 		let xOffset = CGFloat(gameModel.width-1)/2.0
 		let yOffset = CGFloat(gameModel.height-1)/2.0
