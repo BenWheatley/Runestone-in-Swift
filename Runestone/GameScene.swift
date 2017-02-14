@@ -16,12 +16,12 @@ class GameScene: SKScene {
     
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
+	private var lastUpdateTime : TimeInterval = 0
+	
 	var gameModel = GameModel()
 	var currentSelection = Array<Tile>()
 	
 	var lblTiles = SKLabelNode(text: "keyTilesRemaining".localize())
-	
-    private var lastUpdateTime : TimeInterval = 0
 	
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
