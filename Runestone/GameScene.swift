@@ -41,12 +41,12 @@ class GameScene: SKScene {
 		lblRemainingMoves.position = CGPoint(x: 0, y: -0.45)
 	}
 	
-	func hardResetGameModel() {
+	func hardResetGameModel(gameWidth: Int = 3, gameHeight: Int = 4) {
 		for t in gameModel.tiles {
 			t.removeFromParent()
 		}
 		
-		gameModel = GameModel()
+		gameModel = GameModel(width: gameWidth, height: gameHeight)
 		let xOffset = CGFloat(gameModel.width-1)/2.0
 		let yOffset = CGFloat(gameModel.height-1)/2.0
 		
@@ -108,8 +108,19 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
 		
-		lblTiles.text = String.localizedStringWithFormat("keyTilesRemaining".localize(), String(gameModel.tileCount()))
-		lblRemainingMoves.text = String.localizedStringWithFormat("keyMovesRemaining".localize(), String(gameModel.remainingMovesCount()))
+		let tileCount = gameModel.tileCount()
+		let moveCount = gameModel.remainingMovesCount()
+		lblTiles.text = String.localizedStringWithFormat("keyTilesRemaining".localize(), String(tileCount))
+		lblRemainingMoves.text = String.localizedStringWithFormat("keyMovesRemaining".localize(), String(moveCount))
+		if tileCount == 0 {
+			if gameModel.width < gameModel.height {
+				hardResetGameModel(gameWidth: gameModel.width+1, gameHeight: gameModel.height)
+			} else {
+				hardResetGameModel(gameWidth: gameModel.width, gameHeight: gameModel.height+1)
+			}
+		} else if moveCount == 0 {
+			hardResetGameModel(gameWidth: gameModel.width, gameHeight: gameModel.height)
+		}
 		
         // Initialize _lastUpdateTime if it has not already been
         if (self.lastUpdateTime == 0) {
