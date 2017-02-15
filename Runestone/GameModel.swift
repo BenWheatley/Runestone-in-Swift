@@ -115,6 +115,19 @@ class GameModel {
 		return tiles.filter({![TileType.Blank, TileType.Blocking].contains($0.type)}).count
 	}
 	
+	/// Returns the number of possible moves given the current board state
+	func remainingMovesCount() -> Int {
+		var count = 0
+		for i in 0..<tiles.count-1 {
+			for j in i+1..<tiles.count {
+				if route(fastOrPretty: .Pretty, from: tiles[i], to: tiles[j]) != nil {
+					count = count + 1
+				}
+			}
+		}
+		return count
+	}
+	
 	/**
 	- parameter location: Location to test
 	- returns: Is the location **both** inside the game space **and** blank?
@@ -187,17 +200,28 @@ class GameModel {
 		case Pretty
 	}
 	
-	/** Searches a route between two tiles.
+	/** Searches a route between two tiles. Returns nil if the tile pair cannot be removed for whatever reason.
 	
 	- parameter fastOrPretty: "Pretty" routes use the smallest number of bends, for example two tiles next to each other is a zero-bend path;
 	You don't want to use a "pretty" search every frame on every tile, or at least you *didn't* when this was running on an iPhone 4.
 	
-	- parameter from: The origin tile
-	- parameter to: The destination tile
+	- parameter from: The origin tile. Will fail to return a route if this tile is not removable, or is a different type than *to*.
+	- parameter to: The destination tile. Will fail to return a route if this tile is not removable, or is a different type than *from*.
 	
 	- returns: Optional array of Int2DPosition representing the steps on the route; nil if no route exists
 	*/
 	func route(fastOrPretty: FastOrPretty, from: Tile, to: Tile) -> [Int2DPosition]? {
+		// Rapid exit if either of [from, to] tiles is blank or blocking
+		for t in [from, to] {
+			if [.Blank, .Blocking].contains(t.type) {
+				return nil
+			}
+		}
+		// Rapid exit if types do not match
+		if from.type != to.type {
+			return nil
+		}
+		
 		let minRemainingBends = ( fastOrPretty==FastOrPretty.Fast ? 2 : 1 )
 		
 		for remainingBends in minRemainingBends..<2 {
