@@ -75,9 +75,9 @@ class GameModel {
 	var tiles: [Tile]
 	var currentSelection = Array<Tile>()
 	
-	init() {
-		width = 4
-		height = 5
+	init(width: Int = 4, height: Int = 5) {
+		self.width = width
+		self.height = height
 		
 		// Create all tiles
 		tiles = [Tile]()
@@ -174,10 +174,10 @@ class GameModel {
 	*/
 	func tryToMatchAndRemoveTiles(_ firstTile: Tile, _ secondTile: Tile) {
 		if (route(fastOrPretty:.Pretty, from:firstTile, to:secondTile) != nil) {
-			firstTile.removeFromParent()
-			secondTile.removeFromParent()
-			firstTile.type = TileType.Blank
-			secondTile.type = TileType.Blank
+			for t in [firstTile, secondTile] {
+				t.removeFromParent()
+				t.type = TileType.Blank
+			}
 			for tile in tiles {
 				deselect(tile:tile)
 			}

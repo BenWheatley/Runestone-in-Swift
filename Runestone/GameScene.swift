@@ -21,7 +21,7 @@ class GameScene: SKScene {
     var graphs = [String : GKGraph]()
 	private var lastUpdateTime : TimeInterval = 0
 	
-	var gameModel = GameModel()
+	var gameModel = GameModel(width: 0, height: 0)
 	
 	var lblTiles = SKLabelNode()
 	var lblRemainingMoves = SKLabelNode()
@@ -29,6 +29,24 @@ class GameScene: SKScene {
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
 		
+		hardResetGameModel()
+		
+		for label in [lblTiles, lblRemainingMoves] {
+			label.removeFromParent()
+			label.color = UIColor.white
+			label.setScale(SCALE)
+			self.addChild(label)
+		}
+		lblTiles.position = CGPoint(x: 0, y: -0.4)
+		lblRemainingMoves.position = CGPoint(x: 0, y: -0.45)
+	}
+	
+	func hardResetGameModel() {
+		for t in gameModel.tiles {
+			t.removeFromParent()
+		}
+		
+		gameModel = GameModel()
 		let xOffset = CGFloat(gameModel.width-1)/2.0
 		let yOffset = CGFloat(gameModel.height-1)/2.0
 		
@@ -41,15 +59,6 @@ class GameScene: SKScene {
 				self.addChild(tile)
 			}
 		}
-		
-		for label in [lblTiles, lblRemainingMoves] {
-			label.removeFromParent()
-			label.color = UIColor.white
-			label.setScale(SCALE)
-			self.addChild(label)
-		}
-		lblTiles.position = CGPoint(x: 0, y: -0.4)
-		lblRemainingMoves.position = CGPoint(x: 0, y: -0.45)
 	}
 	
     func touchDown(atPoint pos : CGPoint) {
