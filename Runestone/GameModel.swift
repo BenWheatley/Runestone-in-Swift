@@ -173,7 +173,7 @@ class GameModel {
 	it removes the tiles from the game. If they cannot be removed, deselects the second tile.
 	*/
 	func tryToMatchAndRemoveTiles(_ firstTile: Tile, _ secondTile: Tile) {
-		if firstTile.type == secondTile.type && (route(fastOrPretty:.Pretty, from:firstTile, to:secondTile) != nil) {
+		if (route(fastOrPretty:.Pretty, from:firstTile, to:secondTile) != nil) {
 			firstTile.removeFromParent()
 			secondTile.removeFromParent()
 			firstTile.type = TileType.Blank
