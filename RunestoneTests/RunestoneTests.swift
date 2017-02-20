@@ -20,17 +20,50 @@ class RunestoneTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+	
+	// Use XCTAssert and related functions to verify your tests produce the correct results.
+	
+    func testGameModelCreation() {
+		let model: GameModel? = GameModel()
+		XCTAssert(model != nil)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
+	
+	func testGameModelIsEvenSize() {
+		let model = GameModel()
+		XCTAssert( (model.tileCount() % 2)==0 )
+	}
+	
+	func testGameModelHasFourOfEachTile() {
+		let model = GameModel()
+		// For each tile, see how many tiles match the type of this tile. Including this tile (because it matches itself) there should be four in each list
+		for t in model.tiles {
+			let arrayOfMatchingTiles = model.tiles.filter({$0.type == t.type})
+			XCTAssert( arrayOfMatchingTiles.count == 4 )
+		}
+	}
+	
+    func testPerformanceFastSearch() {
         self.measure {
-            // Put the code you want to measure the time of here.
+			self.commonSpeedTest(fastOrPretty: GameModel.FastOrPretty.Fast)
         }
-    }
-    
+	}
+	
+	func testPerformancePrettySearch() {
+		self.measure {
+			self.commonSpeedTest(fastOrPretty: GameModel.FastOrPretty.Pretty)
+		}
+	}
+	
+	// Many repetitions needed, as search speed varies depending on random shuffling of tiles
+	func commonSpeedTest(fastOrPretty: GameModel.FastOrPretty) {
+		for _ in 0..<100 {
+			let model = GameModel()
+			for i in 0..<model.tiles.count-1 {
+				for j in i+1..<model.tiles.count {
+					_ = model.route(fastOrPretty: fastOrPretty, from: model.tiles[i], to: model.tiles[j])
+				}
+			}
+		}
+	}
+	
 }
