@@ -69,15 +69,39 @@ struct Int2DPosition {
 	var y: Int
 }
 
+enum GameSize {
+	case smallest
+	case small
+	case mediumSmall
+	case mediumLarge
+	case large
+	case largest
+}
+
 class GameModel {
+	private var gameSize: GameSize
+	
 	var width: Int
 	var height: Int
 	var tiles: [Tile]
 	var currentSelection = Array<Tile>()
 	
-	init(width: Int = 4, height: Int = 5) {
-		self.width = width
-		self.height = height
+	init(size: GameSize = .small) {
+		gameSize = size
+		switch size {
+		case .smallest:
+			(width, height) = (3, 4) // 12, %4 = 0
+		case .small:
+			(width, height) = (4, 4) // 16, %4 = 0
+		case .mediumSmall:
+			(width, height) = (4, 5) // 20, %4 = 0
+		case .mediumLarge:
+			(width, height) = (4, 6) // 24, %4 = 0; note that (5, 5) would be odd and therefore always unsolvable
+		case .large:
+			(width, height) = (5, 6) // 30, %4 = 2
+		case .largest:
+			(width, height) = (6, 6) // 36, %4 = 0
+		}
 		
 		// Create all tiles
 		tiles = [Tile]()
@@ -107,6 +131,23 @@ class GameModel {
 				tiles[i].horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
 				tiles[i].verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
 			}
+		}
+	}
+	
+	/// Returns the current game size
+	func getCurrentGameSize() -> GameSize {
+		return gameSize
+	}
+	
+	/// Returns a more difficult game size, or loops around to easy if it's already as hard as possible
+	func getHarderGameSize() -> GameSize {
+		switch gameSize {
+		case .smallest: return .small
+		case .small: return .mediumSmall
+		case .mediumSmall: return .mediumLarge
+		case .mediumLarge: return .large
+		case .large: return .largest
+		case .largest: return .smallest
 		}
 	}
 	

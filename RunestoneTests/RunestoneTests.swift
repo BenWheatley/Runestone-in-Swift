@@ -29,16 +29,18 @@ class RunestoneTests: XCTestCase {
 	}
 	
 	func testGameModelIsEvenSize() {
-		let model = GameModel()
-		XCTAssert( (model.tileCount() % 2)==0 )
+		for size in [GameSize.smallest, GameSize.small, GameSize.mediumSmall, GameSize.mediumLarge, GameSize.large, GameSize.largest] {
+			let model = GameModel(size: size)
+			XCTAssert( (model.tileCount() % 2)==0 )
+		}
 	}
 	
 	func testGameModelHasFourOfEachTile() {
 		let model = GameModel()
-		// For each tile, see how many tiles match the type of this tile. Including this tile (because it matches itself) there should be four in each list
+		// For each tile, see how many tiles match the type of this tile. Including this tile (because it matches itself) there should be an even number in each list
 		for t in model.tiles {
 			let arrayOfMatchingTiles = model.tiles.filter({$0.type == t.type})
-			XCTAssert( arrayOfMatchingTiles.count == 4 )
+			XCTAssert( (arrayOfMatchingTiles.count % 2)==0 )
 		}
 	}
 	

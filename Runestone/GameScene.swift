@@ -21,7 +21,7 @@ class GameScene: SKScene {
     var graphs = [String : GKGraph]()
 	private var lastUpdateTime : TimeInterval = 0
 	
-	var gameModel = GameModel(width: 0, height: 0)
+	var gameModel = GameModel()
 	
 	var lblTiles = SKLabelNode()
 	var lblRemainingMoves = SKLabelNode()
@@ -41,12 +41,12 @@ class GameScene: SKScene {
 		lblRemainingMoves.position = CGPoint(x: 0, y: -0.45)
 	}
 	
-	func hardResetGameModel(gameWidth: Int = 3, gameHeight: Int = 4) {
+	func hardResetGameModel(gameSize: GameSize = GameSize.smallest) {
 		for t in gameModel.tiles {
 			t.removeFromParent()
 		}
 		
-		gameModel = GameModel(width: gameWidth, height: gameHeight)
+		gameModel = GameModel(size: gameSize)
 		let xOffset = CGFloat(gameModel.width-1)/2.0
 		let yOffset = CGFloat(gameModel.height-1)/2.0
 		
@@ -113,13 +113,9 @@ class GameScene: SKScene {
 		lblTiles.text = String.localizedStringWithFormat("keyTilesRemaining".localize(), String(tileCount))
 		lblRemainingMoves.text = String.localizedStringWithFormat("keyMovesRemaining".localize(), String(moveCount))
 		if tileCount == 0 {
-			if gameModel.width < gameModel.height {
-				hardResetGameModel(gameWidth: gameModel.width+1, gameHeight: gameModel.height)
-			} else {
-				hardResetGameModel(gameWidth: gameModel.width, gameHeight: gameModel.height+1)
-			}
+			hardResetGameModel(gameSize: gameModel.getHarderGameSize())
 		} else if moveCount == 0 {
-			hardResetGameModel(gameWidth: gameModel.width, gameHeight: gameModel.height)
+			hardResetGameModel(gameSize: gameModel.getCurrentGameSize())
 		}
 		
         // Initialize _lastUpdateTime if it has not already been
