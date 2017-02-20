@@ -55,6 +55,8 @@ class RunestoneTests: XCTestCase {
 	}
 	
 	// Many repetitions needed, as search speed varies depending on random shuffling of tiles
+	// Testing all possible combinations would be impractical given how many there are:
+	//	O(n!⋅n²) where n = width⋅height
 	func commonSpeedTest(fastOrPretty: GameModel.FastOrPretty) {
 		for _ in 0..<1000 {
 			let model = GameModel()
