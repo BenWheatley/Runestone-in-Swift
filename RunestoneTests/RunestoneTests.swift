@@ -26,7 +26,7 @@ class RunestoneTests: XCTestCase {
     func testGameModelCreation() {
 		let model: GameModel? = GameModel()
 		XCTAssert(model != nil)
-    }
+	}
 	
 	func testGameModelIsEvenSize() {
 		let model = GameModel()
@@ -56,7 +56,7 @@ class RunestoneTests: XCTestCase {
 	
 	// Many repetitions needed, as search speed varies depending on random shuffling of tiles
 	func commonSpeedTest(fastOrPretty: GameModel.FastOrPretty) {
-		for _ in 0..<100 {
+		for _ in 0..<1000 {
 			let model = GameModel()
 			for i in 0..<model.tiles.count-1 {
 				for j in i+1..<model.tiles.count {
