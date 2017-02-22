@@ -265,7 +265,7 @@ class GameModel {
 		
 		let minRemainingBends = ( fastOrPretty==FastOrPretty.Fast ? 2 : 1 )
 		
-		for remainingBends in minRemainingBends..<2 {
+		for remainingBends in minRemainingBends...2 {
 			for direction in [Direction.North, Direction.East, Direction.South, Direction.West] {
 				let result = route(from: from.realPosition!, to: to.realPosition!, direction: direction, remainingBends: remainingBends)
 				if (result != nil) {
