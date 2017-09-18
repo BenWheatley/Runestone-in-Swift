@@ -36,17 +36,17 @@ import Foundation
 		// Create all tiles
 		tiles = [Tile]()
 		
-		var progress = TileType.A
+		var progress: Tile.TileType = .A
 		var subProgress = 0
 		
 		for _ in 0..<height*width {
 			tiles.append(Tile(type:progress))
 			subProgress += 1
 			if subProgress%4==0 {
-				if let nextProgress = TileType( rawValue:(progress.rawValue+1) ) {
+				if let nextProgress = Tile.TileType( rawValue:(progress.rawValue+1) ) {
 					progress = nextProgress
 				} else {
-					progress = TileType.Blank
+					progress = .Blank
 				}
 			}
 		}
@@ -81,7 +81,7 @@ import Foundation
 	
 	/// Returns the number of non-blank, non-blocking tiles in this game
 	func tileCount() -> Int {
-		return tiles.filter({![TileType.Blank, TileType.Blocking].contains($0.type)}).count
+		return tiles.filter({![.Blank, .Blocking].contains($0.type)}).count
 	}
 	
 	/// Returns the number of possible moves given the current board state
@@ -109,7 +109,7 @@ import Foundation
 			return true
 		}
 		let index = location.y*width + location.x
-		return tiles[index].type==TileType.Blank
+		return tiles[index].type == .Blank
 	}
 	
 	/// If the user has selected enough tiles, remove them or cancel selection as appropriate
