@@ -145,7 +145,7 @@ import Foundation
 		if (route(fastOrPretty:.Pretty, from:firstTile, to:secondTile) != nil) {
 			for t in [firstTile, secondTile] {
 				t.removeFromParent()
-				t.type = TileType.Blank
+				t.type = Tile.TileType.Blank
 			}
 			for tile in tiles {
 				deselect(tile:tile)
@@ -167,6 +167,16 @@ import Foundation
 	enum FastOrPretty {
 		case Fast
 		case Pretty
+	}
+	
+	/// Set of possible sizes for the game.
+	@objc enum GameSize: Int {
+		case smallest
+		case small
+		case mediumSmall
+		case mediumLarge
+		case large
+		case largest
 	}
 	
 	/** Searches a route between two tiles. Returns nil if the tile pair cannot be removed for whatever reason.
