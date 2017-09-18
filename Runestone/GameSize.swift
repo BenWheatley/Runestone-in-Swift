@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum GameSize {
+@objc enum GameSize: Int {
 	case smallest
 	case small
 	case mediumSmall

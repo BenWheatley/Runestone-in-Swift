@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GameModel {
+@objc class GameModel: NSObject {
 	private var gameSize: GameSize
 	
 	var width: Int
