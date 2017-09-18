@@ -41,7 +41,7 @@ class GameScene: SKScene {
 		lblRemainingMoves.position = CGPoint(x: 0, y: -0.45)
 	}
 	
-	func hardResetGameModel(gameSize: GameSize = GameSize.smallest) {
+	func hardResetGameModel(gameSize: GameModel.GameSize = .smallest) {
 		for t in gameModel.tiles {
 			t.removeFromParent()
 		}
