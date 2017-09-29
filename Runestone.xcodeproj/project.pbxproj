@@ -23,18 +23,12 @@
 		B5B49A071F6FB478006C4217 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B5B499FD1F6FB478006C4217 /* README.md */; };
 		B5B49A081F6FB478006C4217 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B5B499FD1F6FB478006C4217 /* README.md */; };
 		B5B49A091F6FB478006C4217 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B5B499FD1F6FB478006C4217 /* README.md */; };
-		B5B49A1D1F6FB998006C4217 /* TileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A1C1F6FB998006C4217 /* TileType.swift */; };
-		B5B49A1E1F6FB998006C4217 /* TileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A1C1F6FB998006C4217 /* TileType.swift */; };
-		B5B49A1F1F6FB998006C4217 /* TileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A1C1F6FB998006C4217 /* TileType.swift */; };
 		B5B49A211F6FB9AF006C4217 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A201F6FB9AF006C4217 /* Tile.swift */; };
 		B5B49A221F6FB9AF006C4217 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A201F6FB9AF006C4217 /* Tile.swift */; };
 		B5B49A231F6FB9AF006C4217 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A201F6FB9AF006C4217 /* Tile.swift */; };
 		B5B49A251F6FB9C2006C4217 /* Int2DPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A241F6FB9C2006C4217 /* Int2DPosition.swift */; };
 		B5B49A261F6FB9C2006C4217 /* Int2DPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A241F6FB9C2006C4217 /* Int2DPosition.swift */; };
 		B5B49A271F6FB9C2006C4217 /* Int2DPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A241F6FB9C2006C4217 /* Int2DPosition.swift */; };
-		B5B49A291F6FB9D7006C4217 /* GameSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A281F6FB9D7006C4217 /* GameSize.swift */; };
-		B5B49A2A1F6FB9D7006C4217 /* GameSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A281F6FB9D7006C4217 /* GameSize.swift */; };
-		B5B49A2B1F6FB9D7006C4217 /* GameSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49A281F6FB9D7006C4217 /* GameSize.swift */; };
 		B5D492421E4B76E400CDCD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D492411E4B76E400CDCD92 /* AppDelegate.swift */; };
 		B5D492441E4B76E400CDCD92 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5D492431E4B76E400CDCD92 /* GameScene.sks */; };
 		B5D492461E4B76E400CDCD92 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5D492451E4B76E400CDCD92 /* Actions.sks */; };
@@ -73,10 +67,8 @@
 		B5B499FB1F6FB478006C4217 /* KSStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSStringExtensions.swift; sourceTree = "<group>"; };
 		B5B499FC1F6FB478006C4217 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B5B499FD1F6FB478006C4217 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B5B49A1C1F6FB998006C4217 /* TileType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileType.swift; sourceTree = "<group>"; };
 		B5B49A201F6FB9AF006C4217 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		B5B49A241F6FB9C2006C4217 /* Int2DPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int2DPosition.swift; sourceTree = "<group>"; };
-		B5B49A281F6FB9D7006C4217 /* GameSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSize.swift; sourceTree = "<group>"; };
 		B5D4923E1E4B76E400CDCD92 /* Runestone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runestone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D492411E4B76E400CDCD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5D492431E4B76E400CDCD92 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -138,10 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				B5D492751E4B7A7600CDCD92 /* GameModel.swift */,
-				B5B49A281F6FB9D7006C4217 /* GameSize.swift */,
 				B5B49A241F6FB9C2006C4217 /* Int2DPosition.swift */,
 				B5B49A201F6FB9AF006C4217 /* Tile.swift */,
-				B5B49A1C1F6FB998006C4217 /* TileType.swift */,
 			);
 			name = "Game model";
 			sourceTree = "<group>";
@@ -273,7 +263,7 @@
 				TargetAttributes = {
 					B5D4923D1E4B76E400CDCD92 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+                        ProvisioningStyle = Automatic;
 					};
 					B5D492571E4B76E500CDCD92 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -348,11 +338,9 @@
 			files = (
 				B50D935E1E528B9B0084ED7A /* README.md in Sources */,
 				B5D492481E4B76E400CDCD92 /* GameScene.swift in Sources */,
-				B5B49A1D1F6FB998006C4217 /* TileType.swift in Sources */,
 				B5D492761E4B7A7600CDCD92 /* GameModel.swift in Sources */,
 				B5B49A251F6FB9C2006C4217 /* Int2DPosition.swift in Sources */,
 				B5D4924A1E4B76E400CDCD92 /* GameViewController.swift in Sources */,
-				B5B49A291F6FB9D7006C4217 /* GameSize.swift in Sources */,
 				B5D492421E4B76E400CDCD92 /* AppDelegate.swift in Sources */,
 				B5B499FE1F6FB478006C4217 /* KSArrayExtensions.swift in Sources */,
 				B5B49A211F6FB9AF006C4217 /* Tile.swift in Sources */,
@@ -365,7 +353,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5B49A2A1F6FB9D7006C4217 /* GameSize.swift in Sources */,
 				B5B49A021F6FB478006C4217 /* KSStringExtensions.swift in Sources */,
 				B50D935F1E528B9B0084ED7A /* README.md in Sources */,
 				B5B49A081F6FB478006C4217 /* README.md in Sources */,
@@ -373,7 +360,6 @@
 				B5B49A261F6FB9C2006C4217 /* Int2DPosition.swift in Sources */,
 				B5D4925D1E4B76E500CDCD92 /* RunestoneTests.swift in Sources */,
 				B5B499FF1F6FB478006C4217 /* KSArrayExtensions.swift in Sources */,
-				B5B49A1E1F6FB998006C4217 /* TileType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +367,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5B49A2B1F6FB9D7006C4217 /* GameSize.swift in Sources */,
 				B5B49A031F6FB478006C4217 /* KSStringExtensions.swift in Sources */,
 				B50D93601E528B9B0084ED7A /* README.md in Sources */,
 				B5B49A091F6FB478006C4217 /* README.md in Sources */,
@@ -389,7 +374,6 @@
 				B5B49A271F6FB9C2006C4217 /* Int2DPosition.swift in Sources */,
 				B5D492681E4B76E500CDCD92 /* RunestoneUITests.swift in Sources */,
 				B5B49A001F6FB478006C4217 /* KSArrayExtensions.swift in Sources */,
-				B5B49A1F1F6FB998006C4217 /* TileType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
