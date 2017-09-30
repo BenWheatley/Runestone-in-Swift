@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct Int2DPosition {
+// Has to be a class instead of a struct because of ObjC compatibility
+@objc
+class Int2DPosition: NSObject {
 	var x: Int
 	var y: Int
+	init(x: Int, y: Int) {
+		(self.x, self.y) = (x, y)
+	}
 }
