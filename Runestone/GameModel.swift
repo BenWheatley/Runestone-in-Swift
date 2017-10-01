@@ -125,6 +125,12 @@ import Foundation
 		}
 	}
 	
+	/// Selects a tile and adds it to the list of selected tiles
+	func select(tile:Tile) {
+		tile.highlighted = true
+		currentSelection.append(tile)
+	}
+	
 	/// Deselects a tile and removes it from the list of selected tiles
 	func deselect(tile:Tile) {
 		tile.highlighted = false
@@ -145,7 +151,7 @@ import Foundation
 		if (route(fastOrPretty:.Pretty, from:firstTile, to:secondTile) != nil) {
 			for t in [firstTile, secondTile] {
 				t.removeFromParent()
-				t.type = Tile.TileType.Blank
+				t.type = .Blank
 			}
 			for tile in tiles {
 				deselect(tile:tile)
@@ -230,7 +236,7 @@ import Foundation
 			return nil
 		}
 		
-		var nextFrom = from
+		var nextFrom = from.copyWithType() // Because it's a class not a struct, in turn because of ObjC bridging
 		switch direction {
 		case .North:
 			nextFrom.y -= 1

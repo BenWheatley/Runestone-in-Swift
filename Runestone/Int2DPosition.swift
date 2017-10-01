@@ -16,4 +16,9 @@ class Int2DPosition: NSObject {
 	init(x: Int, y: Int) {
 		(self.x, self.y) = (x, y)
 	}
+	
+	/// Down side of switching from a struct to a class is that it became a reference rather than a value
+	func copyWithType() -> Int2DPosition {
+		return Int2DPosition(x: self.x, y: self.y)
+	}
 }
